@@ -45,5 +45,8 @@ APP_KEY, APP_DEBUG, DB_... CONNECTION, DATABASE, HOST, PASSWORD, PORT, USERNAME,
 32. Kör konsol på Heroku-webbsida för att migrera databasen till den nya databasen: php artisan migrate.
 33. Testa API:et på https://produktlagerapi.herokuapp.com/
 
-## SKAPA VUE-PROJEKT
-1. 
+## ANVÄND HEROKU-APP/-API
+CRUD-funktionalitet: https://produktlagerapi.herokuapp.com/api/lager
+Registrera: https://produktlagerapi.herokuapp.com/api/register
+Logga in: https://produktlagerapi.herokuapp.com/api/login
+Logga ut: https://produktlagerapi.herokuapp.com/api/logout
