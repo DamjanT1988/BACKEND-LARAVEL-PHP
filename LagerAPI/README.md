@@ -36,7 +36,7 @@
 ### PUBLICERING 
 25. Skapa en Heroku-app: heroku create lagerapi
 26. Generera APP-nyckel: php artisan key:generate --show
-27. Lägg till APP-nyckeln i Heroku: heroku config:set APP_KEY=[nyckel] --app=damjan-moment2
+27. Lägg till APP-nyckeln i Heroku i terminal: heroku config:set APP_KEY=[nyckel] --app=lagerapi
 28. Push till Heroku-git: git push https://git.heroku.com/lagerapi.git
 29. Lägg till JawsSQL för databas på Heroku
 30. Lägg till databasinformation från SQL-databasen i Heroku-appen i inställningar:
