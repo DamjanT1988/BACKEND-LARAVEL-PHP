@@ -41,5 +41,5 @@
 29. Lägg till JawsSQL för databas på Heroku
 30. Lägg till databasinformation från SQL-databasen i Heroku-appen i inställningar:
 APP_KEY, APP_DEBUG, DB_... CONNECTION, DATABASE, HOST, PASSWORD, PORT, USERNAME, JAWSSDB_URL
-31. Kör konsol på Heroku-webbsida för att migrera databasen till den nya databasen: php artisan migrate
+31. Kör konsol på Heroku-webbsida för att migrera databasen till den nya databasen: php artisan migrate.
 32. Testa API:et på https://lagerapi.herokuapp.com/ 
