@@ -34,11 +34,12 @@
 24. Testa API:et i ThunderClient: data ska presenteras i JSON-format
 
 ### PUBLICERING 
-. Skapa en Heroku-app: heroku create damjan-projekt
-. Generera APP-nyckel: php artisan key-generate --show
-. Lägg till APP-nyckeln i Heroku: heroku config:set APP_KEY=[nyckel] --app=damjan-moment2
-. Push till Heroku-git: git push https://git.heroku.com/damjan-moment2.git
-. Lägg till JawsSQL för databas på Heroku
-. Lägg till databasinformation från SQL-databasen i Heroku-appen i inställningar
-. Kör konsol på Heroku-webbsida för att migrera databasen till den nya databasen: php artisan migrate
-. Testa API:et på https://damjan-moment2.herokuapp.com/ 
+25. Skapa en Heroku-app: heroku create lagerapi
+26. Generera APP-nyckel: php artisan key:generate --show
+27. Lägg till APP-nyckeln i Heroku i terminal: heroku config:set APP_KEY=[nyckel] --app=lagerapi
+28. Push till Heroku-git: git push https://git.heroku.com/lagerapi.git
+29. Lägg till JawsSQL för databas på Heroku
+30. Lägg till databasinformation från SQL-databasen i Heroku-appen i inställningar:
+APP_KEY, APP_DEBUG, DB_... CONNECTION, DATABASE, HOST, PASSWORD, PORT, USERNAME, JAWSSDB_URL
+31. Kör konsol på Heroku-webbsida för att migrera databasen till den nya databasen: php artisan migrate.
+32. Testa API:et på https://lagerapi.herokuapp.com/ 
