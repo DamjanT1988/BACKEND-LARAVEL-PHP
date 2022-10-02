@@ -10,21 +10,18 @@ return new class extends Migration
     {
         Schema::create('productlibraries', function (Blueprint $table) {
             $table->id();
+            //skapa fält för databas
             $table->string('product_title');
-            $table->textarea('product_description');
-            $table->double('price');
-            $table->integer('amount_storage');
-            $table->string('expiration_data');
-            $table->
+            $table->text('product_description')->nullable();
+            $table->double('price')->nullable();
+            $table->integer('amount_storage')->nullable();
+            $table->string('expiration_data')->nullable();
+            $table->string('image_file_path')->nullable();
+            $table->string('image_alt')->nullable();
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('productlibraries');
