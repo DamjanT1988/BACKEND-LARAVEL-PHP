@@ -94,14 +94,14 @@ class authcontroller extends Controller
     }  
 
     ///////////////////////////////
-    //S4-10. skapa en utlogg
+    //skapa en utlogg
     public function logout(Request $request) {
-        //S4-10-1 använd request för att se vilken användare är
-        // och förstör den i SQL-databasen = utlogg
+        //använd request för att se vilken användare är
+        //och förstör den i SQL-databasen = utlogg
         $request->user()->currentAccessToken()->delete();
 
         $response = [
-            'message' => 'User logged out'
+            'message' => 'Användare utloggad!'
         ];
 
         return response($response, 200);

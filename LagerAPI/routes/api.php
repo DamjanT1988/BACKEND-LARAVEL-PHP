@@ -16,6 +16,12 @@ anropa via /register -> använd metod register i AuthController;
 anropar funktion register*/
 Route::post('/register', [authcontroller::class, 'register']);
 
+//skapa route för login
+Route::post('/login', [authcontroller::class, 'login']);
+
+//inloggade kan komma åt utloggfunktion
+Route::post('/logout', [authcontroller::class, 'logout'])->middleware('auth:sanctum');
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

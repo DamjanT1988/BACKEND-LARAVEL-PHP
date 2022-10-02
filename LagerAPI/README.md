@@ -24,14 +24,17 @@
 16. Skapa route för REGISTRATION
 17. Testa REGISTRATION-funktion (testa auth => bearer med token)
 18. Skapa LOGIN-funktion
-19. Skapa route för LOGIN
+19. Skapa route för LOGIN¨
+20. Testa LOGIN-funktion
+21. Skapa LOGOUT-funktion
+22. Testa LOGOUT-funktion (med token i bearer)
 
 ### TESTA
-. Se API-lyssnande: php artisan route:list
-. Testa API:et i ThunderClient: data ska presenteras i JSON-format
+23. Se API-lyssnande: php artisan route:list
+24. Testa API:et i ThunderClient: data ska presenteras i JSON-format
 
 ### PUBLICERING 
-. Skapa en Heroku-app: heroku create damjan-moment2
+. Skapa en Heroku-app: heroku create damjan-projekt
 . Generera APP-nyckel: php artisan key-generate --show
 . Lägg till APP-nyckeln i Heroku: heroku config:set APP_KEY=[nyckel] --app=damjan-moment2
 . Push till Heroku-git: git push https://git.heroku.com/damjan-moment2.git
