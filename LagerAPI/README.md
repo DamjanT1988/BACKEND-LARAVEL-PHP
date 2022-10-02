@@ -50,3 +50,23 @@ CRUD-funktionalitet: https://produktlagerapi.herokuapp.com/api/lager
 Registrera: https://produktlagerapi.herokuapp.com/api/register
 Logga in: https://produktlagerapi.herokuapp.com/api/login
 Logga ut: https://produktlagerapi.herokuapp.com/api/logout
+
+### LÄGG TILL  
+Behöver en token i bearer.
+{
+  "product_title": "",
+  "product_description": "",
+  "price": X,
+  "amount_storage": X,
+  "expiration_data": "",
+  "image_file_path": "",
+  "image_alt": ""
+}
+
+### INLOGG/REGISTRERA
+Namn behövs inte.
+{
+  "name" : "",
+  "email" : "",
+  "password" : ""
+}
