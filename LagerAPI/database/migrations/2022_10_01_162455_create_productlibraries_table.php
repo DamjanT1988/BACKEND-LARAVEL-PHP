@@ -15,7 +15,7 @@ return new class extends Migration
             $table->text('product_description')->nullable();
             $table->double('price')->nullable();
             $table->integer('amount_storage')->nullable();
-            $table->string('expiration_data')->nullable();
+            $table->string('expiration_date')->nullable();
             $table->string('image_file_path')->nullable();
             $table->string('image_alt')->nullable();
             $table->timestamps();
