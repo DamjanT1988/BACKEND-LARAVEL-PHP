@@ -38,9 +38,12 @@
 26. Skapa en Procfile: klistrna in "web: vendor/bin/heroku-php-apache2 public/"
 27. Generera APP-nyckel: php artisan key:generate --show
 28. Lägg till APP-nyckeln i Heroku i terminal: heroku config:set APP_KEY=[nyckel] --app=lagerapi
-29. Push till Heroku-git: git push https://git.heroku.com/lagerapi.git
+29. Push till Heroku-git: git push https://git.heroku.com/produktlagerapi.git
 30. Lägg till JawsSQL för databas på Heroku
 31. Lägg till databasinformation från SQL-databasen i Heroku-appen i inställningar:
 APP_KEY, APP_DEBUG, DB_... CONNECTION, DATABASE, HOST, PASSWORD, PORT, USERNAME, JAWSSDB_URL
 32. Kör konsol på Heroku-webbsida för att migrera databasen till den nya databasen: php artisan migrate.
-33. Testa API:et på https://lagerapi.herokuapp.com/ 
+33. Testa API:et på https://produktlagerapi.herokuapp.com/
+
+## SKAPA VUE-PROJEKT
+1. 
