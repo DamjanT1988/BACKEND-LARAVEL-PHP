@@ -4,7 +4,7 @@
 0. Installera Laravel, PHP, Heroku, Composer, Artisan
 1. Klona GIT-repo: git clone...
 
-### SKAPA 
+### SKAPA API
 2. Skapa Laravelprojekt i repo: laravel new Gamesapi
 3. Skapa server: php artisan serve
 4. Skapa en databas i MySQL via PHPMyAdmin: gamesapi
@@ -16,16 +16,26 @@
 10. Skapa en controller: php artisan make:controller GamesController --api
 11. Koda CRUD i kontroller mot model
 
+### SKAPA REGISTRATION/LOGIN
+12. Lägg till "->middleware('auth:sanctum')" i api.php - routes
+13. Skapa ny controller: php artisan make:controller authcontroller
+14. Lägg till Use-länkar i authcontroller
+15. Koda i authcontroller: skapa REGISTRATION-funktion
+16. Skapa route för REGISTRATION
+17. Testa REGISTRATION-funktion (testa auth => bearer med token)
+18. Skapa LOGIN-funktion
+19. Skapa route för LOGIN
+
 ### TESTA
-12. Se API-lyssnande: php artisan route:list
-13. Testa API:et i ThunderClient: data ska presenteras i JSON-format
+. Se API-lyssnande: php artisan route:list
+. Testa API:et i ThunderClient: data ska presenteras i JSON-format
 
 ### PUBLICERING 
-14. Skapa en Heroku-app: heroku create damjan-moment2
-15. Generera APP-nyckel: php artisan key-generate --show
-16. Lägg till APP-nyckeln i Heroku: heroku config:set APP_KEY=[nyckel] --app=damjan-moment2
-17. Push till Heroku-git: git push https://git.heroku.com/damjan-moment2.git
-18. Lägg till JawsSQL för databas på Heroku
-19. Lägg till databasinformation från SQL-databasen i Heroku-appen i inställningar
-20. Kör konsol på Heroku-webbsida för att migrera databasen till den nya databasen: php artisan migrate
-21. Testa API:et på https://damjan-moment2.herokuapp.com/ 
+. Skapa en Heroku-app: heroku create damjan-moment2
+. Generera APP-nyckel: php artisan key-generate --show
+. Lägg till APP-nyckeln i Heroku: heroku config:set APP_KEY=[nyckel] --app=damjan-moment2
+. Push till Heroku-git: git push https://git.heroku.com/damjan-moment2.git
+. Lägg till JawsSQL för databas på Heroku
+. Lägg till databasinformation från SQL-databasen i Heroku-appen i inställningar
+. Kör konsol på Heroku-webbsida för att migrera databasen till den nya databasen: php artisan migrate
+. Testa API:et på https://damjan-moment2.herokuapp.com/ 
