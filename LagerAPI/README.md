@@ -46,7 +46,9 @@ APP_KEY, APP_DEBUG, DB_... CONNECTION, DATABASE, HOST, PASSWORD, PORT, USERNAME,
 33. Testa API:et på https://produktlagerapi.herokuapp.com/
 
 ## ANVÄND HEROKU-APP/-API
-CRUD-funktionalitet: https://produktlagerapi.herokuapp.com/api/lager
+CRUD-funktionalitet: 
+Lokal: http://127.0.0.1:8000/api/lager
+Publik: https://produktlagerapi.herokuapp.com/api/lager
 Registrera: https://produktlagerapi.herokuapp.com/api/register
 Logga in: https://produktlagerapi.herokuapp.com/api/login
 Logga ut: https://produktlagerapi.herokuapp.com/api/logout
@@ -58,7 +60,7 @@ Behöver en token i bearer.
   "product_description": "",
   "price": X,
   "amount_storage": X,
-  "expiration_data": "",
+  "expiration_date": "",
   "image_file_path": "",
   "image_alt": ""
 }
