@@ -11,5 +11,5 @@ class productlibrary extends Model
     //skapa tabell
     protected $table = 'productlibraries';
     //skapa fält för ifyllnad
-    protected $fillable = ['product_title', 'product_description', 'price', 'amount_storage', 'expiration_date', 'image_file_path', 'image_alt'];
+    protected $fillable = ['product_title', 'ean_number', 'product_description', 'price', 'amount_storage', 'expiration_date', 'image_file_path', 'image_alt'];
 }
