@@ -11,7 +11,7 @@
 5. Uppdatera .env-fil med databasinställningar
 6. Skapa model med migration: php artisan make:model Gameslibrary --migration
 7. Lägg till i databasmigrationsfiler: alla $tables med fält
-8. Lägg till i model GamesLibrary: $tabel & $fillable
+8. Lägg till i model ProductLibrary: $tabel & $fillable
 9. Migrera till databas: php artisan migrate
 10. Skapa en controller: php artisan make:controller GamesController --api
 11. Koda CRUD i kontroller mot model
