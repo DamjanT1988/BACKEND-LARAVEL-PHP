@@ -5,11 +5,15 @@ use Illuminate\Support\Facades\Route;
 
 //skapa väg till controller
 use App\Http\Controllers\productcontroller;
+use App\Http\Controllers\othercontroller;
 //inkludera AuthController
 use App\Http\Controllers\authcontroller;
 
 //skapa routes med skydd från otillbörlig access (sanctum)
 Route::resource('lager', productcontroller::class)->middleware('auth:sanctum');
+
+//säkerhetsnyckel
+Route::resource('securitykey', othercontroller::class);
 
 /*skapa publika routes
 anropa via /register -> använd metod register i AuthController; 

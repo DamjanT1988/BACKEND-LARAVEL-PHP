@@ -12,6 +12,7 @@ use App\Models\User;
 
 class authcontroller extends Controller
 {
+    
         //skapa registration
         public function register (Request $request) {
             //använd validatorn direkt
@@ -31,7 +32,7 @@ class authcontroller extends Controller
                //fel värden slås is:om ingen användare, anropa fail-metod
                if($validatedUser->fails()) {
                    return response()->json([
-                       'message' => 'Valideringsfel',
+                       'message' => 'Fel e-mejl/lösenord',
                        'error' => $validatedUser->errors()
                    ], 401);
                }
@@ -71,7 +72,7 @@ class authcontroller extends Controller
 
             if($validatedUser->fails()) {
                 return response()->json([
-                    'message' => 'Valideringsfel',
+                    'message' => 'Skriv korrekt uppgifter!',
                     'error' => $validatedUser->errors()
                 ], 401);
             }
