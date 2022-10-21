@@ -12,7 +12,6 @@ use App\Models\User;
 
 class authcontroller extends Controller
 {
-    
         //skapa registration
         public function register (Request $request) {
             //använd validatorn direkt
@@ -32,7 +31,7 @@ class authcontroller extends Controller
                //fel värden slås is:om ingen användare, anropa fail-metod
                if($validatedUser->fails()) {
                    return response()->json([
-                       'message' => 'Fel e-mejl/lösenord',
+                       'message' => 'Incorrect password or email',
                        'error' => $validatedUser->errors()
                    ], 401);
                }
@@ -50,7 +49,7 @@ class authcontroller extends Controller
             
             //lagra i variabel responsen
             $response = [
-                'message' => 'Användare skapad!',
+                'message' => 'User account created!',
                 'user' => $user,
                 'token' => $token
             ];
@@ -72,7 +71,7 @@ class authcontroller extends Controller
 
             if($validatedUser->fails()) {
                 return response()->json([
-                    'message' => 'Skriv korrekt uppgifter!',
+                    'message' => 'Enter correct information!',
                     'error' => $validatedUser->errors()
                 ], 401);
             }
@@ -81,7 +80,7 @@ class authcontroller extends Controller
             if(!auth()->attempt($request->only('email', 'password'))) {
                 //vid fel
                 return response()->json ([
-                    'message' => 'Fel emejl/lösenord'
+                    'message' => 'Wrong password of email!'
                 ], 401);
             }
 
@@ -102,7 +101,7 @@ class authcontroller extends Controller
         $request->user()->currentAccessToken()->delete();
 
         $response = [
-            'message' => 'Användare utloggad!'
+            'message' => 'User logged out!'
         ];
 
         return response($response, 200);

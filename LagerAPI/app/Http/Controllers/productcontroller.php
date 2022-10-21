@@ -42,7 +42,7 @@ class productcontroller extends Controller
         
               if($product == null) {
                   return response()->json([
-                      'Product not found'
+                      'Article number not found'
                   ], 404);
               } else {
                   $product->update($request->all());

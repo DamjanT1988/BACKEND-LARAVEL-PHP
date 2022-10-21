@@ -5,15 +5,15 @@
 1. Klona GIT-repo: git clone...
 
 ### SKAPA API
-2. Skapa Laravelprojekt i repo: laravel new Gamesapi
+2. Skapa Laravelprojekt i repo: laravel new lagerapi
 3. Skapa server: php artisan serve
-4. Skapa en databas i MySQL via PHPMyAdmin: gamesapi
+4. Skapa en databas i MySQL via PHPMyAdmin: lagerapi
 5. Uppdatera .env-fil med databasinställningar
-6. Skapa model med migration: php artisan make:model Gameslibrary --migration
+6. Skapa model med migration: php artisan make:model productlibrary --migration (och otherlibrary)
 7. Lägg till i databasmigrationsfiler: alla $tables med fält
-8. Lägg till i model ProductLibrary: $tabel & $fillable
+8. Lägg till i model ProductLibrary: $table & $fillable
 9. Migrera till databas: php artisan migrate
-10. Skapa en controller: php artisan make:controller GamesController --api
+10. Skapa en controller: php artisan make:controller authcontroller --api
 11. Koda CRUD i kontroller mot model
 
 ### SKAPA REGISTRATION/LOGIN
@@ -24,14 +24,14 @@
 16. Skapa route för REGISTRATION
 17. Testa REGISTRATION-funktion (testa auth => bearer med token)
 18. Skapa LOGIN-funktion
-19. Skapa route för LOGIN¨
+19. Skapa route för LOGIN
 20. Testa LOGIN-funktion
 21. Skapa LOGOUT-funktion
 22. Testa LOGOUT-funktion (med token i bearer)
 
 ### TESTA
 23. Se API-lyssnande: php artisan route:list
-24. Testa API:et i ThunderClient: data ska presenteras i JSON-format
+24. Testa API:et i ThunderClient/ARC: data ska presenteras i JSON-format
 
 ### PUBLICERING 
 25. Skapa en Heroku-app: heroku create lagerapi
@@ -57,16 +57,17 @@ Logga ut: https://produktlagerapi.herokuapp.com/api/logout
 Behöver en token i bearer.
 {
   "product_title": "",
+  "ean_number": "",
   "product_description": "",
-  "price": X,
-  "amount_storage": X,
+  "price": "",
+  "amount_storage": "",
   "expiration_date": "",
   "image_file_path": "",
   "image_alt": ""
 }
 
 ### INLOGG/REGISTRERA
-Namn behövs inte.
+Namn behövs inte. Dock behövs en säkerhetsnyckel för att få registrering godkänd.
 {
   "name" : "",
   "email" : "",

@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             //skapa fält för databas.
             $table->string('product_title');
-            $table->text('ean_number');
+            $table->varchar('ean_number');
             $table->text('product_description')->nullable();
             $table->double('price')->nullable();
             $table->integer('amount_storage')->nullable();
