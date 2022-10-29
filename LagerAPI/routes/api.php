@@ -13,20 +13,6 @@ use App\Http\Controllers\authcontroller;
 //skapa routes med skydd från otillbörlig access (sanctum)
 Route::resource('lager', productcontroller::class)->middleware('auth:sanctum');
 
-
-/*
-//For adding an image
-Route::get('/add-image',[imageuploadcontroller::class,'addImage'])->name('images.add');
-
-//For storing an image
-Route::post('/store-image',[imageuploadcontroller::class,'storeImage'])
-->name('images.store');
-
-//For showing an image
-Route::get('/view-image',[imageuploadcontroller::class,'viewImage'])->name('images.view');
-*/
-
-
 //säkerhetsnyckel
 Route::resource('securitykey', othercontroller::class);
 
