@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 //skapa väg till controller
 use App\Http\Controllers\productcontroller;
 use App\Http\Controllers\othercontroller;
-//use App\Http\Controllers\imageuploadcontroller;
 //inkludera AuthController
 use App\Http\Controllers\authcontroller;
 
